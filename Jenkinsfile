@@ -37,8 +37,8 @@ stage("Docker push") {
 stage("Deploy to staging") {
      steps {
 	
-         // sh "docker run -d --rm -p 8765:8080 --name calculator_1 ram/calculator_1"
-		 sh "docker-compose up -d"
+          sh "docker run -d --rm -p 8765:8080 --name calculator_1 ram/calculator_1"
+		// sh "docker-compose up -d"
      }
 }
 
@@ -51,7 +51,7 @@ stage("Acceptance test") {
      }
 	 post {
      always {
-         sh "docker-compose down"
+        // sh "docker-compose down"
      }
 }
 }
