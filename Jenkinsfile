@@ -37,7 +37,7 @@ stage("Docker push") {
 stage("Deploy to staging") {
      steps {
 	
-          sh "docker run -d --rm -p 8765:8080 --name calculator_1 ram/calculator_1"
+          sh "docker run -d --rm -p 8765:8080 --name calculator_1 ram423/calculator_1"
 		// sh "docker-compose up -d"
      }
 }
