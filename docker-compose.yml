@@ -3,6 +3,6 @@ services:
      calculator:
           image: ram423/calculator_1:latest
           ports:
-               - 8080
+               - 8765:8080
      redis:
           image: redis:latest
